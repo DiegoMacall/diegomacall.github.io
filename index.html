@@ -49,19 +49,19 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #145214; /* Deep green to represent Christmas foliage */
+  background: #145214; /* Deep green */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background-color: #FFAF42; /* Base color is golden */
-  background-image: -webkit-linear-gradient(45deg,
-    rgba(255, 0, 0, 0.8) 25%, /* Bright red */
-    rgba(0, 128, 0, 0.8) 25%, /* Green */
-    rgba(255, 215, 0, 0.8) 50%, /* Gold */
-    rgba(0, 128, 0, 0.8) 50%, /* Green */
-    rgba(255, 0, 0, 0.8) 75%, /* Bright red */
-    rgba(255, 215, 0, 0.8) 75%); /* Gold */
+  background-image: 
+    url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"%3E%3Ctext x="0" y="15" font-size="15"%3E🎅%3C/text%3E%3C/svg%3E'),
+    url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"%3E%3Ctext x="0" y="15" font-size="15"%3E🎄%3C/text%3E%3C/svg%3E'),
+    url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"%3E%3Ctext x="0" y="15" font-size="15"%3E🎁%3C/text%3E%3C/svg%3E'),
+    url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"%3E%3Ctext x="0" y="15" font-size="15"%3E🦌%3C/text%3E%3C/svg%3E');
+  background-size: 20px 20px;
+  background-repeat: repeat;
 }
 
 /* Handle on hover */
