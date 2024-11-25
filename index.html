@@ -44,25 +44,31 @@
 <style>
 /* width */
 ::-webkit-scrollbar {
-  width: 25px;
+  width: 15px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #145214; /* Deep green */
+  background: #145214; /* Deep green to represent Christmas foliage */
+  background-image: -webkit-linear-gradient(45deg,
+    rgba(34, 139, 34, 0.3) 25%, /* Lighter green tones for subtle texture */
+    transparent 25%,
+    transparent 50%,
+    rgba(50, 205, 50, 0.3) 50%,
+    rgba(34, 139, 34, 0.3) 75%,
+    transparent 75%, transparent); 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: #FFAF42; /* Base color */
-  background-image: 
-    url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"%3E%3Ctext x="0" y="15" font-size="15"%3E🎅%3C/text%3E%3C/svg%3E'),
-    url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"%3E%3Ctext x="0" y="15" font-size="15"%3E🎄%3C/text%3E%3C/svg%3E'),
-    url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"%3E%3Ctext x="0" y="15" font-size="15"%3E🎁%3C/text%3E%3C/svg%3E'),
-    url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"%3E%3Ctext x="0" y="15" font-size="15"%3E🦌%3C/text%3E%3C/svg%3E');
-  background-size: 15px 15px; /* Reduce size to fit scrollbar */
-  background-repeat: repeat-y; /* Stack icons vertically */
-  background-position: center; /* Center icons horizontally */
+  background-color: #FFAF42; /* Golden to reflect Christmas ornaments */
+  background-image: -webkit-linear-gradient(45deg,
+    rgba(255, 223, 186, 0.3) 25%, /* Light golden shimmer */
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 165, 0, 0.3) 50%,
+    rgba(255, 223, 186, 0.3) 75%,
+    transparent 75%, transparent);
 }
 
 /* Handle on hover */
@@ -76,8 +82,9 @@
     rgba(255, 255, 255, 1) 75%, /* White */
     rgba(255, 0, 0, 1) 75%); /* Red */
 }
+
 </style>
-	
+
 </head> 
 
 
