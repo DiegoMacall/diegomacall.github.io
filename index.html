@@ -49,19 +49,20 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #145214; /* Deep green to represent Christmas foliage */
+  background: #145214; /* Deep green */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: #FFAF42; /* Base color is golden */
-  background-image: -webkit-linear-gradient(45deg,
-    rgba(255, 0, 0, 0.8) 25%, /* Bright red */
-    rgba(0, 128, 0, 0.8) 25%, /* Green */
-    rgba(255, 215, 0, 0.8) 50%, /* Gold */
-    rgba(0, 128, 0, 0.8) 50%, /* Green */
-    rgba(255, 0, 0, 0.8) 75%, /* Bright red */
-    rgba(255, 215, 0, 0.8) 75%); /* Gold */
+  background-color: #FFAF42; /* Base color */
+  background-image: -webkit-repeating-linear-gradient(45deg,
+    rgba(0, 0, 0, 0) 0%, /* Transparent base for padding */
+    #FFFFFF 5%, /* White background for clarity */
+    #FFFFFF 20%),
+    url('data:image/svg+xml;charset=UTF-8, \
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"> \
+      <text x="0" y="15" font-size="15">🎅</text> \
+    </svg>') center center / 20px 20px repeat; /* Santa icon */
 }
 
 /* Handle on hover */
@@ -75,6 +76,7 @@
     rgba(139, 0, 0, 1) 85%); /* Dark red */
 }
 </style>
+
 	
 </head> 
 
