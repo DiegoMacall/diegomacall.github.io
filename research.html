@@ -537,8 +537,11 @@
   <script src="/home/assets/js/main.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123046279-1"></script>
+   <script src="Diego Macall/main.js"></script>
+  <script src="Diego Macall/all.js"></script>
+
+
+<script async="" src="Diego Macall/js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -546,6 +549,28 @@
 
   gtag('config', 'UA-123046279-1', { 'anonymize_ip': false});
 </script>
+
+<script>
+  
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+
+  document.addEventListener('keydown', function(e) {
+
+    if (e.keyCode === 123) {
+      e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
+      e.preventDefault();
+    }
+
+    if (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 80)) {
+      e.preventDefault();
+    }
+  });
+</script>
+
 
   </body>
 </html>
