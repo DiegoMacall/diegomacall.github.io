@@ -174,16 +174,21 @@
 
 <div itemscope itemtype="http://schema.org/Person">
 
-  
-    <div class="author__avatar">
-      
+	
 
-      
+  
+    <div class="author__avatar">      
         <img src="Diego Macall/profilepic.jpg" alt="Diego Macall" itemprop="image">
-      
     </div>
-  
 
+.author__avatar img {
+  width: 200px;       /* pick any size you want */
+  height: 200px;      /* same as width → square */
+  object-fit: cover;  /* crop to fit without stretching */
+  border-radius: 0;   /* keeps sharp square corners */
+  display: block;
+}
+  
   <div class="author__content">
     
       <h3 class="author__name" itemprop="name">Diego M. Macall</h3>
