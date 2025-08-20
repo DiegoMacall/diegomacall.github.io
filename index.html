@@ -111,6 +111,18 @@
     rgba(255, 0, 0, 1) 75%); /* Red */
 }
 
+
+/* Profile Picture */
+
+.author__avatar img {
+  width: 200px;       /* pick any size you want */
+  height: 200px;      /* same as width → square */
+  object-fit: cover;  /* crop to fit without stretching */
+  border-radius: 0;   /* keeps sharp square corners */
+  display: block;
+}
+
+	
 </style>
 
 </head> 
@@ -181,13 +193,7 @@
         <img src="Diego Macall/profilepic.jpg" alt="Diego Macall" itemprop="image">
     </div>
 
-.author__avatar img {
-  width: 200px;       /* pick any size you want */
-  height: 200px;      /* same as width → square */
-  object-fit: cover;  /* crop to fit without stretching */
-  border-radius: 0;   /* keeps sharp square corners */
-  display: block;
-}
+
   
   <div class="author__content">
     
