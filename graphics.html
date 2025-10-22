@@ -14,6 +14,60 @@
       --accent:#8B5CF6; --accent-soft:#F1EAFF; --card:#fff; --bg:#fff;
     }
 
+
+
+
+
+/* Teal nav bar */
+:root{
+  --teal:#20B2AA; --teal-deep:#008080; --teal-bright:#40E0D0;
+  --ink:#0F172A; --bg:#ffffff;
+}
+.nav{
+  position:sticky; top:0; z-index:1000;
+  background:linear-gradient(90deg, var(--teal-deep), var(--teal), var(--teal-bright));
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
+}
+.nav__inner{
+  max-width:1100px; margin:0 auto; padding:10px 16px;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+.nav__brand{
+  color:#fff; font-weight:700; text-decoration:none; white-space:nowrap;
+}
+.nav__links{ list-style:none; margin:0; padding:0; display:flex; gap:10px; flex-wrap:wrap; }
+.nav__links a{
+  --c:rgba(255,255,255,.85);
+  color:var(--c); text-decoration:none; font-weight:600;
+  padding:8px 10px; border-radius:10px; position:relative;
+}
+.nav__links a::after{
+  content:""; position:absolute; left:10px; right:10px; bottom:4px;
+  height:2px; background:rgba(255,255,255,.0); transition:background .2s,width .2s;
+}
+.nav__links a:hover{ background:rgba(255,255,255,.12); color:#fff; }
+.nav__links a:hover::after{ background:#fff; }
+.nav__links a.active{ background:rgba(255,255,255,.22); color:#fff; }
+
+/* add top gap so content doesn't hide under sticky nav (adjust if needed) */
+.main-wrap{ margin-top:70px; }
+@media (max-width:760px){
+  .nav__inner{ flex-direction:column; align-items:flex-start; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
     /* ----- Masthead from previous step (optional if already on page) ----- */
     .masthead{position:fixed; top:0; left:0; right:0; z-index:1000; background:var(--bg); border-bottom:1px solid var(--border);}
     .masthead__inner-wrap{max-width:1100px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; justify-content:space-between;}
