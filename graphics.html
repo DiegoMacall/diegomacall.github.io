@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Graphics Portfolio</title>
+  <style>
+    :root{
+      --ink:#0F172A;           /* heading/text */
+      --muted:#475569;         /* body text */
+      --card:#ffffff;          /* card bg */
+      --border:#e5e7eb;        /* light border */
+      --accent:#8B5CF6;        /* link / accent */
+      --accent-soft:#F1EAFF;   /* subtle accent bg */
+    }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+      color:var(--muted);
+      background:#fff;
+      line-height:1.6;
+    }
+    .wrap{max-width:980px; margin:40px auto; padding:0 20px;}
+    h1{font-size:2rem; margin:0 0 .75rem 0; color:var(--ink); line-height:1.2;}
+    p{margin:.6rem 0;}
+    .lead {font-size:1.05rem;}
+    .repo-callout{
+      display:flex; align-items:center; gap:.6rem;
+      background:var(--accent-soft); border:1px solid var(--border);
+      padding:12px 14px; border-radius:10px; margin:16px 0 26px 0;
+    }
+    .repo-callout a{color:var(--accent); text-decoration:none; font-weight:600;}
+    .repo-callout a:hover{ text-decoration:underline; }
+    hr{border:none; border-top:1px solid var(--border); margin:26px 0;}
+    h2{font-size:1.25rem; color:var(--ink); margin:0 0 .75rem 0;}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:16px;
+    }
+    @media (max-width:760px){ .grid{ grid-template-columns:1fr; } }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:14px 16px;
+      transition: box-shadow .15s ease, transform .15s ease;
+    }
+    .card:hover{ box-shadow:0 8px 24px rgba(2,6,23,.06); transform: translateY(-1px);}
+    .card h3{margin:.2rem 0 .35rem; font-size:1.05rem; color:var(--ink);}
+    .card p{margin:0 0 .6rem 0;}
+    .card a{
+      color:var(--accent); font-weight:600; text-decoration:none;
+    }
+    .card a:hover{ text-decoration:underline; }
+    .eyebrow{font-size:.85rem; letter-spacing:.02em; color:var(--muted);}
+    .emoji{margin-right:.35rem;}
+    footer{margin-top:28px; font-size:.9rem; color:#64748B;}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>🎨 Graphics Portfolio</h1>
+      <p class="lead">
+        I create data visualizations that blend clarity, design, and scientific accuracy.
+        Each piece showcases a specific communication goal — whether it’s revealing trends,
+        comparing systems, or visualizing abstract metrics.
+      </p>
+
+      <div class="repo-callout">
+        <span class="emoji" aria-hidden="true">📁</span>
+        <span><strong>Explore the full repository on GitHub:</strong>
+          <a href="https://github.com/DiegoMacall/graphics-portfolio" target="_blank" rel="noopener">github.com/DiegoMacall/graphics-portfolio</a>
+        </span>
+      </div>
+    </header>
+
+    <hr />
+
+    <section aria-labelledby="featured">
+      <h2 id="featured">🖼️ Featured Works</h2>
+
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="eyebrow">Dashboard</div>
+          <h3>Financial Dashboard (Company X, 2025)</h3>
+          <p>Interactive half-year report showing key assets, composition, and deltas at a glance.</p>
+          <a href="https://github.com/DiegoMacall/graphics-portfolio/tree/main/09_dashboard" target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="eyebrow">Comparative Graphic</div>
+          <h3>Slope Graph: Life Expectancy in Central America</h3>
+          <p>Multi-decade comparison, emphasizing relative change across countries.</p>
+          <a href="https://github.com/DiegoMacall/graphics-portfolio/tree/main/01_slope-graph" target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      Last updated: 2025-10-22 · Designed &amp; built by Diego M. Macall
+    </footer>
+  </main>
+</body>
+</html>
