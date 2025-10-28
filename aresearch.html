@@ -89,6 +89,69 @@
 <![endif]-->
 
 
+<style>
+/* 2×2 hero grid (invisible) */
+.hero-grid {
+  --img-h: 300px;   /* height of the image row (make bigger/smaller as you like) */
+  --cap-h: 72px;    /* height of the caption row */
+  max-width: 980px;
+  margin: 20px auto 28px;   /* centers the grid */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: var(--img-h) var(--cap-h);
+  grid-template-areas:
+    "img1 img2"
+    "cap1 cap2";
+  gap: 0; /* invisible grid */
+}
+
+/* image cells */
+.hero-grid .img {
+  overflow: hidden;
+}
+.hero-grid .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills the big top cells */
+  display: block;
+}
+
+/* caption cells (shorter) */
+.hero-grid .cap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  text-align: center;
+  line-height: 1.35;
+  /* no borders/background → invisible grid */
+}
+
+/* map cells to areas */
+.hero-grid .img-1 { grid-area: img1; }
+.hero-grid .img-2 { grid-area: img2; }
+.hero-grid .cap-1 { grid-area: cap1; }
+.hero-grid .cap-2 { grid-area: cap2; }
+
+/* Mobile: stack as Image→Caption, then Image→Caption */
+@media (max-width: 760px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--img-h) var(--cap-h) var(--img-h) var(--cap-h);
+    grid-template-areas:
+      "img1"
+      "cap1"
+      "img2"
+      "cap2";
+  }
+}
+</style>
+
+
+
+
+	
+
     <!-- start custom head snippets -->
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
