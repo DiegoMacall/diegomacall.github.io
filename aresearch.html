@@ -90,54 +90,57 @@
 
 
 <style>
-/* 2×2 hero grid (invisible) */
 .hero-grid {
-  --img-h: 300px;   /* height of the image row (make bigger/smaller as you like) */
-  --cap-h: 72px;    /* height of the caption row */
+  --img-h: 360px; /* image height */
+  --cap-h: auto;  /* flexible caption height */
   max-width: 980px;
-  margin: 20px auto 28px;   /* centers the grid */
+  margin: 30px auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: var(--img-h) var(--cap-h);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto; /* image then caption */
   grid-template-areas:
     "img1 img2"
     "cap1 cap2";
-  gap: 0; /* invisible grid */
+  column-gap: 28px; /* 🟣 space between images */
+  row-gap: 14px;    /* 🟣 space between rows */
 }
 
 /* image cells */
 .hero-grid .img {
   overflow: hidden;
+  border-radius: 8px;
 }
 .hero-grid .img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;   /* fills the big top cells */
+  height: var(--img-h);
+  object-fit: cover;
   display: block;
+  border-radius: 8px;
 }
 
-/* caption cells (shorter) */
+/* caption cells */
 .hero-grid .cap {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 12px;
   text-align: center;
-  line-height: 1.35;
-  /* no borders/background → invisible grid */
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  padding: 4px 8px;
 }
 
-/* map cells to areas */
+/* grid areas */
 .hero-grid .img-1 { grid-area: img1; }
 .hero-grid .img-2 { grid-area: img2; }
 .hero-grid .cap-1 { grid-area: cap1; }
 .hero-grid .cap-2 { grid-area: cap2; }
 
-/* Mobile: stack as Image→Caption, then Image→Caption */
+/* mobile layout */
 @media (max-width: 760px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: var(--img-h) var(--cap-h) var(--img-h) var(--cap-h);
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
       "img1"
       "cap1"
@@ -146,7 +149,6 @@
   }
 }
 </style>
-
 
 
 
