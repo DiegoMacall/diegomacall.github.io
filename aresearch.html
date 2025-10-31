@@ -65,26 +65,37 @@
 <![endif]-->
 
 <style>
-/* Scrollbar track */
-::-webkit-scrollbar {
-  width: 12px;
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #FFA500 #121212; /* thumb, track */
 }
 
-/* Scrollbar thumb */
-::-webkit-scrollbar-thumb {
-  border-radius: 50px;
+/* WebKit (Chrome/Edge/Safari) */
+html::-webkit-scrollbar {
+  width: 14px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #121212;         /* dark track for contrast */
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  border: 2px solid #121212;   /* prevents glow from being clipped, adds contrast */
   background-image: linear-gradient(45deg,
-    #A9A9A9 0%,   /* Metallic gray */
+    #A9A9A9 0%,
     #D3D3D3 25%,
     #A9A9A9 50%,
     #D3D3D3 75%,
     #A9A9A9 100%
   );
-  box-shadow: 0 0 5px #00FFEF; /* Neon glow */
+  box-shadow: 0 0 6px rgba(0,255,239,0.6);
+  transition: all .25s ease-in-out;
 }
 
-/* Hover effect */
-::-webkit-scrollbar-thumb:hover {
+html::-webkit-scrollbar-thumb:hover {
   background-image: linear-gradient(45deg,
     #FFB347 0%,
     #FFA500 25%,
@@ -92,11 +103,9 @@
     #FF7518 75%,
     #FFA500 100%
   );
-  box-shadow: 0 0 10px #FFB347;
+  box-shadow: 0 0 12px rgba(255,179,71,0.9);
 }
 </style>
-  </style>
-<![endif]-->
 
 
 <style>
