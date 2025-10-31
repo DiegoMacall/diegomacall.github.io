@@ -89,15 +89,35 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: #FFAF42; /* Base color is golden */
+  background-color: #FF8C00; /* Pumpkin orange base */
   background-image: -webkit-linear-gradient(45deg,
-    rgba(255, 0, 0, 0.8) 25%, /* Bright red */
-    rgba(0, 128, 0, 0.8) 25%, /* Green */
-    rgba(255, 215, 0, 0.8) 50%, /* Gold */
-    rgba(0, 128, 0, 0.8) 50%, /* Green */
-    rgba(255, 0, 0, 0.8) 75%, /* Bright red */
-    rgba(255, 215, 0, 0.8) 75%); /* Gold */
+    #FF6A00 0%,   /* Bright tangerine orange */
+    #FF7518 25%,  /* Pumpkin orange */
+    #FF8C00 25%,  /* Deep orange */
+    #FF8C00 50%, 
+    #FFB347 50%,  /* Soft amber highlight */
+    #FFB347 75%, 
+    #FF7518 75%, 
+    #FF6A00 100%  /* Tangerine again for rhythm */
+  );
+  border-radius: 10px;
 }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #FFB347; /* Lighter glow on hover */
+  background-image: -webkit-linear-gradient(45deg,
+    #FFA500 0%,   /* Bright amber */
+    #FF8C00 25%, 
+    #FF7518 25%, 
+    #FF7518 50%, 
+    #FFA500 50%, 
+    #FFA500 75%, 
+    #FF8C00 75%, 
+    #FFA500 100%
+  );
+}
+
 	
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
