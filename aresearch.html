@@ -65,35 +65,76 @@
 <![endif]-->
 
 <style>
-/* Scrollbar track */
+/* width */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 15px;
 }
 
-/* Scrollbar thumb */
+/* Track */
+::-webkit-scrollbar-track {
+  background: #211722; 
+}
+ 
+/* Handle */
 ::-webkit-scrollbar-thumb {
-  border-radius: 50px;
-  background-image: linear-gradient(45deg,
-    #A9A9A9 0%,   /* Metallic gray */
-    #D3D3D3 25%,
-    #A9A9A9 50%,
-    #D3D3D3 75%,
-    #A9A9A9 100%
-  );
-  box-shadow: 0 0 5px #00FFEF; /* Neon glow */
+  background: #777; 
 }
 
-/* Hover effect */
+/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-image: linear-gradient(45deg,
-    #FFB347 0%,
-    #FFA500 25%,
-    #FF8C00 50%,
-    #FF7518 75%,
-    #FFA500 100%
-  );
-  box-shadow: 0 0 10px #FFB347;
+  background: #d3e617; 
 }
+</style>
+  </style>
+<![endif]-->
+
+
+<style>
+.hero-grid {
+  --img-h: 360px; /* image height */
+  --cap-h: auto;  /* flexible caption height */
+  max-width: 980px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto; /* image then caption */
+  grid-template-areas:
+    "img1 img2"
+    "cap1 cap2";
+  column-gap: 38px; /* 🟣 space between images */
+  row-gap: 18px;    /* 🟣 space between rows */
+}
+
+/* image cells */
+.hero-grid .img {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.hero-grid .img img {
+  width: 100%;
+  height: var(--img-h);
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* caption cells */
+.hero-grid .cap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  padding: 4px 8px;
+}
+
+/* grid areas */
+.hero-grid .img-1 { grid-area: img1; }
+.hero-grid .img-2 { grid-area: img2; }
+.hero-grid .cap-1 { grid-area: cap1; }
+.hero-grid .cap-2 { grid-area: cap2; }
 
 /* mobile layout */
 @media (max-width: 760px) {
@@ -108,8 +149,6 @@
   }
 }
 </style>
-
-
 
 	
 
