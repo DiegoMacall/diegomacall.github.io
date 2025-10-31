@@ -65,24 +65,34 @@
 <![endif]-->
 
 <style>
-/* width */
+/* Scrollbar track */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 12px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #211722; 
-}
- 
-/* Handle */
+/* Scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background: #777; 
+  border-radius: 50px;
+  background-image: linear-gradient(45deg,
+    #A9A9A9 0%,   /* Metallic gray */
+    #D3D3D3 25%,
+    #A9A9A9 50%,
+    #D3D3D3 75%,
+    #A9A9A9 100%
+  );
+  box-shadow: 0 0 5px #00FFEF; /* Neon glow */
 }
 
-/* Handle on hover */
+/* Hover effect */
 ::-webkit-scrollbar-thumb:hover {
-  background: #d3e617; 
+  background-image: linear-gradient(45deg,
+    #FFB347 0%,
+    #FFA500 25%,
+    #FF8C00 50%,
+    #FF7518 75%,
+    #FFA500 100%
+  );
+  box-shadow: 0 0 10px #FFB347;
 }
 </style>
   </style>
