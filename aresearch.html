@@ -66,17 +66,90 @@
 
 <!-- ✅ Put the scrollbar styles right after your stylesheet link -->
 <style>
-/* Make scrollbar itself dark for contrast */
-::-webkit-scrollbar {
-  width: 22px;
+/* =========================================
+   Neon Grid Scrollbar (dark theme)
+   ========================================= */
+:root{
+  --sb-size: 16px;          /* thickness */
+  --sb-track: #0b1020;      /* track base */
+  --sb-thumb: #1c2333;      /* thumb base */
+  --sb-accent: #39ff14;     /* neon green */
+  --sb-accent-soft: rgba(57,255,20,.25);
 }
 
-/* UFO handle */
-::-webkit-scrollbar-thumb {
-  background: url('https://diegomacall.github.io/ufo.jpg') center center no-repeat;
-  background-size: contain;
-  background-color: #000; /* fallback for when image isn’t visible */
+/* Firefox fallback (colors only) */
+*{
+  scrollbar-width: thin;
+  scrollbar-color: var(--sb-accent) var(--sb-track);
+}
+
+/* WebKit (Chrome/Edge/Safari/Brave) */
+::-webkit-scrollbar{
+  width: var(--sb-size);
+  height: var(--sb-size);
+}
+
+/* Track: subtle dark “tech” pattern */
+::-webkit-scrollbar-track{
+  background:
+    /* diagonal grid pattern */
+    repeating-linear-gradient(
+      45deg,
+      #0f152a 0 8px,
+      #0b1020 8px 16px
+    );
+  border-left: 1px solid rgba(255,255,255,.06);
+  border-top: 1px solid rgba(255,255,255,.04);
+}
+
+/* Thumb: carbon stripes with inner bevel */
+::-webkit-scrollbar-thumb{
+  background:
+    /* carbon-like stripes */
+    repeating-linear-gradient(
+      135deg,
+      #1a2233 0 10px,
+      #212a3f 10px 20px
+    );
+  border: 1px solid rgba(255,255,255,.08);
   border-radius: 12px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.05),
+    inset 0 6px 12px rgba(0,0,0,.35);
+  transition: box-shadow .2s ease, background .2s ease, border-color .2s ease;
+}
+
+/* Hover/drag: neon green glow */
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active{
+  background:
+    linear-gradient(180deg, rgba(57,255,20,.15), rgba(57,255,20,.05)),
+    repeating-linear-gradient(
+      135deg,
+      #1a2233 0 10px,
+      #212a3f 10px 20px
+    );
+  border-color: rgba(57,255,20,.45);
+  box-shadow:
+    0 0 10px 2px var(--sb-accent-soft),
+    0 0 18px 4px rgba(57,255,20,.35),
+    inset 0 0 10px rgba(57,255,20,.25);
+}
+
+/* Corner (when both bars show) */
+::-webkit-scrollbar-corner{
+  background: #0b1020;
+}
+
+/* Respect reduced motion (tone down glow) */
+@media (prefers-reduced-motion: reduce){
+  ::-webkit-scrollbar-thumb{
+    transition: none;
+  }
+  ::-webkit-scrollbar-thumb:hover,
+  ::-webkit-scrollbar-thumb:active{
+    box-shadow: 0 0 8px 2px var(--sb-accent-soft), inset 0 0 6px rgba(57,255,20,.2);
+  }
 }
 </style>
 
