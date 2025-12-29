@@ -187,18 +187,30 @@
 
 /* caption cells */
 .hero-grid .cap {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-
-  align-items: start;
+  display: flex;
+  align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 4px 8px;
+}
+
+/* clamp text inside caption to exactly 2 lines */
+.hero-grid .cap .cap-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
+  /* make truncation look intentional */
+  text-overflow: ellipsis;
+
+  /* tune typography */
   color: #444;
   font-size: 1rem;
-  line-height: 1.3;
-  padding: 4px 8px;
+  line-height: 1.35;
+
+  /* important so the clamp has room */
+  max-width: 100%;
 }
 
 /* grid areas */
