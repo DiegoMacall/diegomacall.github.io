@@ -169,16 +169,15 @@
 }
 
   .hero-grid{
-  max-width: 2500px;                 /* ✅ wider */
-  width: min(100%, 1750px);
+  max-width: 1850px;                 /* ✅ wider */
+  width: min(100%, 1850px);
   margin: 40px auto;
-  padding: 0 12px;
+  padding: 0 20px;
 
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;                         /* ✅ smaller gap = wider columns */
-
-  --img-h: clamp(320px, 34vw, 520px);
+  column-gap: 28px;   /* keep modest so columns stay wide */
+  row-gap: 16px;                  /* ✅ smaller gap = wider columns */
 }
 
 
