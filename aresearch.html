@@ -186,10 +186,9 @@
   line-height: 1.25;
   color: #444;
 
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
+  white-space: normal;   /* ✅ allow wrapping */
+  overflow: visible;     /* ✅ show everything */
+
 }
 
 @media (max-width: 760px){
