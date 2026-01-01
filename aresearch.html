@@ -155,19 +155,32 @@
 
 
 <style>
+.hero-grid .cap{
+  text-align: center;
+  padding: 6px 8px;
+
+  white-space: nowrap;        /* ✅ single line */
+  overflow: hidden;           /* ✅ hide overflow */
+  text-overflow: ellipsis;    /* ✅ … when too long */
+
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #444;
+}
+
 .hero-grid{
-  /* responsive, wide layout */
-  max-width: 1400px;              /* increase/decrease if you want */
-  width: min(100%, 1400px);
-  margin: 40px auto;              /* not 300px */
-  padding: 0 18px;
+  max-width: 1750px;                 /* ✅ wider */
+  width: min(100%, 1750px);
+  margin: 40px auto;
+  padding: 0 12px;
 
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(14px, 2vw, 28px);    /* tight on desktop, comfy on big screens */
+  gap: 18px;                         /* ✅ smaller gap = wider columns */
 
   --img-h: clamp(320px, 34vw, 520px);
 }
+
 
 /* image cells */
 .hero-grid .img{
