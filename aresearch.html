@@ -154,6 +154,49 @@
 </style>
 
 
+ <style>
+.photo-grid{
+  max-width: 1850px;
+  width: min(100%, 1850px);
+  margin: 20px auto;
+  padding: 0 10px;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.photo-card{
+  margin: 0;
+  text-align: center;
+}
+
+.photo-card img{
+  width: 100%;
+  height: clamp(360px, 38vw, 560px);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 14px;
+}
+
+.photo-card figcaption{
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #444;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+@media (max-width: 760px){
+  .photo-grid{ grid-template-columns: 1fr; }
+  .photo-card img{ height: 420px; }
+}
+</style>
 
     <!-- start custom head snippets -->
 
@@ -344,49 +387,7 @@
 	  <div class="archive">
   <h1 id="page-title" class="page__title"></h1>
 
- <style>
-.photo-grid{
-  max-width: 1850px;
-  width: min(100%, 1850px);
-  margin: 40px auto;
-  padding: 0 20px;
 
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-}
-
-.photo-card{
-  margin: 0;
-  text-align: center;
-}
-
-.photo-card img{
-  width: 100%;
-  height: clamp(360px, 38vw, 560px);
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  border-radius: 14px;
-}
-
-.photo-card figcaption{
-  margin-top: 10px;
-  font-size: 1rem;
-  line-height: 1.25;
-  color: #444;
-
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-}
-
-@media (max-width: 760px){
-  .photo-grid{ grid-template-columns: 1fr; }
-  .photo-card img{ height: 420px; }
-}
-</style>
 
 <div class="photo-grid">
   <figure class="photo-card">
