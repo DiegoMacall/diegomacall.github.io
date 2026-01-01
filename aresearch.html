@@ -154,67 +154,6 @@
 </style>
 
 
-<style>
-.photo-grid{
-  max-width: 1850px;
-  width: min(100%, 1850px);
-  margin: 40px auto;
-  padding: 0 20px;
-
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-}
-
-.photo-card{
-  margin: 0;
-  text-align: center;
-}
-
-.photo-card img{
-  width: 100%;
-  height: clamp(360px, 38vw, 560px);
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  border-radius: 14px;
-}
-
-.photo-card figcaption{
-  margin-top: 10px;
-  font-size: 1rem;
-  line-height: 1.25;
-  color: #444;
-
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-}
-
-@media (max-width: 760px){
-  .photo-grid{ grid-template-columns: 1fr; }
-  .photo-card img{ height: 420px; }
-}
-</style>
-
-<div class="photo-grid">
-  <figure class="photo-card">
-    <a href="https://diegomacall.github.io/jacques.jpg" target="_blank" rel="noopener">
-      <img src="https://diegomacall.github.io/jacques.jpg"
-           alt="Jacques Fabrice Vallée & Diego Maximiliano Macall · 2025.">
-    </a>
-    <figcaption>Jacques Fabrice Vallée & Diego Maximiliano Macall · 2025.</figcaption>
-  </figure>
-
-  <figure class="photo-card">
-    <a href="https://diegomacall.github.io/general.jpg" target="_blank" rel="noopener">
-      <img src="https://diegomacall.github.io/general.jpg"
-           alt="Générale Pierre Bescond & Diego Maximiliano Macall · 2025.">
-    </a>
-    <figcaption>Générale Pierre Bescond & Diego Maximiliano Macall · 2025.</figcaption>
-  </figure>
-</div>
 
     <!-- start custom head snippets -->
 
@@ -405,27 +344,67 @@
 	  <div class="archive">
   <h1 id="page-title" class="page__title"></h1>
 
-  <!-- 2×2 hero grid starts here -->
-  <div class="hero-grid">
-    <a class="img img-1" href="#" aria-label="Open image 1">
-      <img src="https://diegomacall.github.io/jacques.jpg" alt="Jacques Fabrice Vallée & Diego Maximiliano Macall · SOL 2025 · Baveno, Italy">
+ <style>
+.photo-grid{
+  max-width: 1850px;
+  width: min(100%, 1850px);
+  margin: 40px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.photo-card{
+  margin: 0;
+  text-align: center;
+}
+
+.photo-card img{
+  width: 100%;
+  height: clamp(360px, 38vw, 560px);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 14px;
+}
+
+.photo-card figcaption{
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #444;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+@media (max-width: 760px){
+  .photo-grid{ grid-template-columns: 1fr; }
+  .photo-card img{ height: 420px; }
+}
+</style>
+
+<div class="photo-grid">
+  <figure class="photo-card">
+    <a href="https://diegomacall.github.io/jacques.jpg" target="_blank" rel="noopener">
+      <img src="https://diegomacall.github.io/jacques.jpg"
+           alt="Jacques Fabrice Vallée & Diego Maximiliano Macall · 2025.">
     </a>
+    <figcaption>Jacques Fabrice Vallée & Diego Maximiliano Macall · 2025.</figcaption>
+  </figure>
 
-    <a class="img img-2" href="#" aria-label="Open image 2">
-      <img src="https://diegomacall.github.io/general.jpg" alt="Générale Pierre Bescond & Diego Maximiliano Macall · SOL 2025 · Baveno, Italy">
+  <figure class="photo-card">
+    <a href="https://diegomacall.github.io/general.jpg" target="_blank" rel="noopener">
+      <img src="https://diegomacall.github.io/general.jpg"
+           alt="Générale Pierre Bescond & Diego Maximiliano Macall · 2025.">
     </a>
-
-    <div class="cap cap-1">
-      Jacques Fabrice Vallée & Diego Maximiliano Macall · 2025.
-    </div>
-
-    <div class="cap cap-2">
-      Générale Pierre Bescond & Diego Maximiliano Macall · 2025.
-    </div>
-  </div>
-  <!-- 2×2 hero grid ends here -->
+    <figcaption>Générale Pierre Bescond & Diego Maximiliano Macall · 2025.</figcaption>
+  </figure>
 </div>
-
 
 
 <!--
