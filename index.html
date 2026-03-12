@@ -145,6 +145,33 @@
 	
 </style>
 
+<style>
+	
+#constellation-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+#constellation-bg svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.page,
+.wrapper,
+.site,
+.site-content,
+.initial-content,
+#main {
+  position: relative;
+  z-index: 1;
+}
+</style>
+
 </head> 
 
 
@@ -462,6 +489,57 @@ Conference/Workshop Announcements:
       e.preventDefault();
     }
   });
+</script>
+
+
+	  <!-- Operator-grade background -->
+<div id="constellation-bg"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script>
+const w = window.innerWidth, h = window.innerHeight, n = 55;
+const svg = d3.select("#constellation-bg").append("svg")
+  .attr("width", w).attr("height", h);
+
+const nodes = d3.range(n).map(() => ({
+  x: Math.random() * w,
+  y: Math.random() * h,
+  vx: (Math.random() - 0.5) * 0.35,
+  vy: (Math.random() - 0.5) * 0.35
+}));
+
+const g = svg.append("g");
+const linkLayer = g.append("g");
+const nodeLayer = g.append("g");
+
+function tick() {
+  nodes.forEach(d => {
+    d.x += d.vx; d.y += d.vy;
+    if (d.x < 0 || d.x > w) d.vx *= -1;
+    if (d.y < 0 || d.y > h) d.vy *= -1;
+  });
+
+  const links = [];
+  for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) {
+    const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+    const dist = Math.hypot(dx, dy);
+    if (dist < 160) links.push({ source: nodes[i], target: nodes[j], a: 1 - dist / 160 });
+  }
+
+  linkLayer.selectAll("line").data(links).join("line")
+    .attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+    .attr("x2", d => d.target.x).attr("y2", d => d.target.y)
+    .attr("stroke", "rgba(90,110,140,0.22)")
+    .attr("stroke-opacity", d => d.a * 0.7)
+    .attr("stroke-width", 0.8);
+
+  nodeLayer.selectAll("circle").data(nodes).join("circle")
+    .attr("cx", d => d.x).attr("cy", d => d.y)
+    .attr("r", 1.8).attr("fill", "rgba(70,90,120,0.85)");
+
+  requestAnimationFrame(tick);
+}
+tick();
 </script>
 
 </body>
