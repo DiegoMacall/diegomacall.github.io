@@ -172,7 +172,77 @@
 }
 </style>
 
+<style>
+
+	#research-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+#research-list .reveal-item {
+  opacity: 0;
+  transform: translateY(8px);
+  min-height: 1.6em;
+}
+
+#research-list .reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.typing-cursor::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 2px;
+  color: #7a7a7a;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+</style>
+
 </head> 
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll("#research-list .reveal-item");
+
+  function typeLine(el, text, speed =30) {
+    return new Promise(resolve => {
+      let i = 0;
+      el.classList.add("revealed", "typing-cursor");
+
+      const timer = setInterval(() => {
+        el.textContent = text.slice(0, i + 1);
+        i++;
+
+        if (i >= text.length) {
+          clearInterval(timer);
+          el.classList.remove("typing-cursor");
+          resolve();
+        }
+      }, speed);
+    });
+  }
+
+  async function runReveal() {
+    for (const item of items) {
+      const text = item.dataset.text || "";
+      await new Promise(r => setTimeout(r, 180));
+      await typeLine(item, text, 24);
+    }
+  }
+
+  runReveal();
+});
+</script>
 
 
 
@@ -378,13 +448,13 @@
 	  
 <hr>
 
-My research interests include:
-<ul>
-  <li> Agricultural Biotechnology </li>
-  <li> Agricultural Policy </li>
-  <li> Digital Sequence Information</li> 
-  <li> Sustainability </li>
-  <li> Urban Science </li>
+<p>My research interests include:</p>
+<ul id="research-list">
+  <li class="reveal-item" data-text="Agricultural Biotechnology"></li>
+  <li class="reveal-item" data-text="Agricultural Policy"></li>
+  <li class="reveal-item" data-text="Digital Sequence Information"></li>
+  <li class="reveal-item" data-text="Sustainability"></li>
+  <li class="reveal-item" data-text="Urban Science"></li>
 </ul>
 
 	 
