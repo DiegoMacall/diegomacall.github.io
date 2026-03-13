@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 
-<html class="js fontawesome-i2svg-active fontawesome-i2svg-complete" lang="en"><head>
+<html class="js fontawesome-i2svg-active fontawesome-i2svg-complete" lang="en">
+	
+<head>
+
+
+	
+
+
+
+		
 
 <script data-goatcounter="https://max2100.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -107,7 +116,114 @@
 
 <!-- end custom head snippets -->
 
-  <style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+  <style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style>
+
+
+
+<style>
+.systems-hero{
+  display:grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap:28px;
+  align-items:center;
+  margin: 8px 0 34px 0;
+  padding: 24px 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(245,249,250,0.96));
+  border: 1px solid rgba(32,178,170,0.18);
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(31, 41, 55, 0.06);
+  overflow: hidden;
+}
+
+.systems-kicker{
+  margin:0 0 8px 0;
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:#20B2AA;
+}
+
+.systems-title{
+  margin:0 0 10px 0;
+  font-size:2rem;
+  line-height:1.08;
+  color:#24323a;
+}
+
+.systems-sub{
+  margin:0;
+  font-size:1rem;
+  line-height:1.6;
+  color:#5b6770;
+  max-width: 52ch;
+}
+
+#systems-svg{
+  width:100%;
+  height:260px;
+  display:block;
+}
+
+.system-node{
+  fill:#ffffff;
+  stroke:#7ccfc8;
+  stroke-width:1.6;
+}
+
+.system-node.core{
+  stroke:#20B2AA;
+  stroke-width:2.2;
+}
+
+.system-link{
+  stroke:#a9dcd8;
+  stroke-width:1.25;
+  fill:none;
+  opacity:0.95;
+}
+
+.system-label{
+  font-size:13px;
+  fill:#4a5961;
+  font-weight:600;
+  letter-spacing:0.01em;
+}
+
+.system-pulse{
+  fill:#20B2AA;
+  filter: drop-shadow(0 0 6px rgba(32,178,170,0.6));
+}
+
+@media (max-width: 900px){
+  .systems-hero{
+    grid-template-columns: 1fr;
+  }
+
+  .systems-title{
+    font-size:1.55rem;
+  }
+
+  #systems-svg{
+    height:220px;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
 
   <body class="layout--home" style="margin-bottom: 201.883px;">
 
@@ -276,36 +392,51 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Research">
-    
-    
-    
-
-    <div class="page__inner-wrap">
-      
-      
-       <section class="page__content" itemprop="text">
+    <meta itemprop="headline" content="Code-and-Apps">
 
 
-<h2 id="publications"> R packages </h2>
-    <style>
-      div.scroll {
-        background-color: #FFFFFF; 
-        width: 1000px;
-        height: 300px;
-        overflow: auto;
-        text-align: justify;
-        padding: 20px;
-      }
-    </style> 
-<div class="scroll">
 
-<p><strong> R package </strong><br />
-<em> Personal Graphic Brand, 2026 </em><br />
-  Published:<a href="https://github.com/DiegoMacall/maxBrand"> R Package </a><br />
-  Code:<a href="https://github.com/DiegoMacall/maxBrand"> R Code </a></p>
-	
+<section class="page__content" itemprop="text">
+
+<div class="systems-hero">
+  <div class="systems-copy">
+    <p class="systems-kicker">Code and Apps</p>
+    <h1 class="systems-title">I build decision tools, data products, and analytical systems.</h1>
+    <p class="systems-sub">
+      R, Python, Shiny, D3.js, dashboards, policy analytics, and applied research workflows.
+    </p>
+  </div>
+  <svg id="systems-svg" viewBox="0 0 900 260" preserveAspectRatio="xMidYMid meet"></svg>
 </div>
+    
+
+
+<div class="page__inner-wrap">
+
+
+      
+
+<section class="page__content" itemprop="text">
+
+  <div class="systems-hero">
+    <div class="systems-copy">
+      <p class="systems-kicker">Code and Apps</p>
+      <h1 class="systems-title">I build decision tools, data products, and analytical systems.</h1>
+      <p class="systems-sub">
+        R, Python, Shiny, D3.js, dashboards, policy analytics, and applied research workflows.
+      </p>
+    </div>
+    <svg id="systems-svg" viewBox="0 0 900 260" preserveAspectRatio="xMidYMid meet"></svg>
+  </div>
+
+  <h2 id="publications">R packages</h2>
+
+  <div class="scroll">
+    <p><strong>R package</strong><br />
+    <em>Personal Graphic Brand, 2026</em><br />
+    Published: <a href="https://github.com/DiegoMacall/maxBrand">R Package</a><br />
+    Code: <a href="https://github.com/DiegoMacall/maxBrand">R Code</a></p>
+  </div>
 
 	   
 	      
@@ -496,9 +627,145 @@
     }
   });
 </script>
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const svg = document.getElementById("systems-svg");
+  if (!svg) return;
+
+  const NS = "http://www.w3.org/2000/svg";
+
+  const nodes = [
+    { id: "core",   x: 450, y: 130, r: 20, label: "Diego Macall", core: true },
+    { id: "r",      x: 210, y: 70,  r: 12, label: "R" },
+    { id: "python", x: 245, y: 190, r: 12, label: "Python" },
+    { id: "shiny",  x: 345, y: 45,  r: 11, label: "Shiny" },
+    { id: "d3",     x: 650, y: 55,  r: 11, label: "D3.js" },
+    { id: "viz",    x: 715, y: 155, r: 11, label: "Visualization" },
+    { id: "policy", x: 625, y: 215, r: 11, label: "Policy" },
+    { id: "ml",     x: 470, y: 38,  r: 11, label: "AI / ML" },
+    { id: "apps",   x: 325, y: 220, r: 11, label: "Apps" }
+  ];
+
+  const links = [
+    ["core","r"], ["core","python"], ["core","shiny"], ["core","d3"],
+    ["core","viz"], ["core","policy"], ["core","ml"], ["core","apps"],
+    ["r","shiny"], ["python","apps"], ["d3","viz"], ["ml","policy"]
+  ];
+
+  function make(tag, attrs = {}, parent = svg) {
+    const el = document.createElementNS(NS, tag);
+    for (const [k,v] of Object.entries(attrs)) el.setAttribute(k, v);
+    parent.appendChild(el);
+    return el;
+  }
+
+  const defs = make("defs");
+  const grad = make("linearGradient", { id:"pulseGrad", x1:"0%", y1:"0%", x2:"100%", y2:"0%" }, defs);
+  make("stop", { offset:"0%", "stop-color":"#bdf3ee" }, grad);
+  make("stop", { offset:"100%", "stop-color":"#20B2AA" }, grad);
+
+  const linkGroup = make("g");
+  const nodeGroup = make("g");
+  const pulseGroup = make("g");
+
+  const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+
+  links.forEach(([a,b]) => {
+    const A = byId[a], B = byId[b];
+    make("line", {
+      x1: A.x, y1: A.y,
+      x2: B.x, y2: B.y,
+      class: "system-link"
+    }, linkGroup);
+  });
+
+  nodes.forEach(n => {
+    make("circle", {
+      cx: n.x,
+      cy: n.y,
+      r: n.r,
+      class: `system-node${n.core ? " core" : ""}`
+    }, nodeGroup);
+
+    make("text", {
+      x: n.x + (n.core ? 0 : 16),
+      y: n.y + (n.core ? 36 : 4),
+      "text-anchor": n.core ? "middle" : "start",
+      class: "system-label"
+    }, nodeGroup).textContent = n.label;
+  });
+
+  function animatePulse(a, b, delay = 0) {
+    const A = byId[a], B = byId[b];
+    const pulse = make("circle", { r: 4.5, class: "system-pulse" }, pulseGroup);
+
+    let start = null;
+    const duration = 1800;
+
+    function frame(ts) {
+      if (!start) start = ts + delay;
+      const t = (ts - start) / duration;
+      if (t < 0) {
+        requestAnimationFrame(frame);
+        return;
+      }
+      if (t > 1) {
+        pulse.remove();
+        return;
+      }
+
+      const x = A.x + (B.x - A.x) * t;
+      const y = A.y + (B.y - A.y) * t;
+
+      pulse.setAttribute("cx", x);
+      pulse.setAttribute("cy", y);
+
+      requestAnimationFrame(frame);
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  const routes = [
+    ["core","python"], ["python","apps"],
+    ["core","d3"], ["d3","viz"],
+    ["core","r"], ["r","shiny"],
+    ["core","ml"], ["ml","policy"]
+  ];
+
+  let routeIndex = 0;
+  setInterval(() => {
+    const [a, b] = routes[routeIndex % routes.length];
+    animatePulse(a, b);
+    routeIndex++;
+  }, 850);
+});
+</script>
+
+
+
+
+
+
+
+
+
+	  
+
+
+
+
+	  
 	  
   </body>
 </html>
+
 
 
 
