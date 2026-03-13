@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 
-<html class="js fontawesome-i2svg-active fontawesome-i2svg-complete" lang="en"><head>
+<html class="js fontawesome-i2svg-active fontawesome-i2svg-complete" lang="en">
+
+	
+	
+<head>
+
+
+
+<style>
+  div.scroll {
+    background-color: #FFFFFF; 
+    width: 1000px;
+    height: 300px;
+    overflow: auto;
+    text-align: justify;
+    padding: 20px;
+  }
+</style>
+	
+
+
+	
 
 <script data-goatcounter="https://max2100.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 	
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
+    <meta charset="utf-8"> 
 
 <!-- begin _includes/seo.html --><title>Diego M. Macall</title>
 	<link rel="icon" type="image/x-icon" href="max.ico">
@@ -107,7 +128,88 @@
 
 <!-- end custom head snippets -->
 
-  <style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+  <style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style>
+
+
+
+
+<style>
+.inline-systems {
+  margin: 0 0 28px 0;
+  padding: 0 0 18px 0;
+  border-bottom: 1px solid rgba(32,178,170,0.14);
+}
+
+.inline-systems h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.1rem;
+  line-height: 1.08;
+  color: #24323a;
+}
+
+.inline-systems p {
+  margin: 0 0 18px 0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #5b6770;
+  max-width: 42ch;
+}
+
+#systems-svg {
+  width: 100%;
+  max-width: 1000px;
+  height: 180px;
+  display: block;
+}
+
+.system-node {
+  fill: #ffffff;
+  stroke: #7ccfc8;
+  stroke-width: 1.6;
+}
+
+.system-node.core {
+  stroke: #20B2AA;
+  stroke-width: 2.2;
+}
+
+.system-link {
+  stroke: #a9dcd8;
+  stroke-width: 1.25;
+  fill: none;
+  opacity: 0.95;
+}
+
+.system-label {
+  font-size: 13px;
+  fill: #4a5961;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.system-pulse {
+  fill: #20B2AA;
+  filter: drop-shadow(0 0 6px rgba(32,178,170,0.6));
+}
+
+.scroll {
+  background-color: #FFFFFF;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 140px;
+  overflow: auto;
+  text-align: justify;
+  padding: 20px;
+  border: 1px solid rgba(32,178,170,0.12);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(31, 41, 55, 0.04);
+  margin-bottom: 28px;
+}
+</style>
+
+
+
+</head>
 
   <body class="layout--home" style="margin-bottom: 201.883px;">
 
@@ -286,18 +388,21 @@
       
        <section class="page__content" itemprop="text">
 
+<div class="inline-systems">
+  <h1>Code and Apps</h1>
+  <p>
+    I build decision tools, data products, and analytical systems across
+    R, Python, Shiny, D3.js, dashboards, and applied research workflows.
+  </p>
+  <svg id="systems-svg" viewBox="0 0 900 180" preserveAspectRatio="xMidYMid meet"></svg>
+</div>
 
-<h2 id="publications"> R packages </h2>
-    <style>
-      div.scroll {
-        background-color: #FFFFFF; 
-        width: 1000px;
-        height: 300px;
-        overflow: auto;
-        text-align: justify;
-        padding: 20px;
-      }
-    </style> 
+
+
+
+		   
+<h2> R packages </h2>
+  
 <div class="scroll">
 
 <p><strong> R package </strong><br />
@@ -309,17 +414,8 @@
 
 	   
 	      
-<h2 id="publications">ShinyApps</h2>
-    <style>
-      div.scroll {
-        background-color: #FFFFFF; 
-        width: 1000px;
-        height: 300px;
-        overflow: auto;
-        text-align: justify;
-        padding: 20px;
-      }
-    </style> 
+<h2>ShinyApps</h2>
+
 <div class="scroll">
 
 <p><strong> ICABR 2026 Budget Tool </strong><br />
@@ -337,17 +433,8 @@
   Published:<a href=" https://diegomacall.shinyapps.io/Food_System_GHG_Emissions/"> Shiny </a></p>
 </div>
 
-<h2 id="publications">JavaScript Apps </h2>
-    <style>
-      div.scroll {
-        background-color: #FFFFFF;
-        width: 1000px;
-        height: 300px;
-        overflow: auto;
-        text-align: justify;
-        padding: 20px;
-      }
-    </style>
+<h2>JavaScript Apps </h2>
+
 <div class="scroll">
 
 <p><strong> Where are the ICABR Members? </strong><br />
@@ -358,17 +445,8 @@
 </div>
 
 
-<h2 id="publications">Python Apps </h2>
-    <style>
-      div.scroll {
-        background-color: #FFFFFF;
-        width: 1000px;
-        height: 300px;
-        overflow: auto;
-        text-align: justify;
-        padding: 20px;
-      }
-    </style>
+<h2>Python Apps </h2>
+
 <div class="scroll">
 
 <p><strong> Individual Supply and Demand Market </strong><br />
@@ -496,6 +574,121 @@
     }
   });
 </script>
-	  
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const svg = document.getElementById("systems-svg");
+  if (!svg) return;
+
+  const NS = "http://www.w3.org/2000/svg";
+
+  const nodes = [
+    { id: "core",   x: 450, y: 90,  r: 16, label: "Diego Macall", core: true },
+    { id: "r",      x: 250, y: 45,  r: 10, label: "R" },
+    { id: "python", x: 265, y: 135, r: 10, label: "Python" },
+    { id: "shiny",  x: 355, y: 35,  r: 9,  label: "Shiny" },
+    { id: "d3",     x: 610, y: 40,  r: 9,  label: "D3.js" },
+    { id: "viz",    x: 675, y: 100, r: 9,  label: "Visualization" },
+    { id: "policy", x: 600, y: 145, r: 9,  label: "Policy" },
+    { id: "ml",     x: 470, y: 30,  r: 9,  label: "AI / ML" },
+    { id: "apps",   x: 355, y: 145, r: 9,  label: "Apps" }
+  ];
+
+  const links = [
+    ["core","r"], ["core","python"], ["core","shiny"], ["core","d3"],
+    ["core","viz"], ["core","policy"], ["core","ml"], ["core","apps"],
+    ["r","shiny"], ["python","apps"], ["d3","viz"], ["ml","policy"]
+  ];
+
+  function make(tag, attrs = {}, parent = svg) {
+    const el = document.createElementNS(NS, tag);
+    for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
+    parent.appendChild(el);
+    return el;
+  }
+
+  const linkGroup = make("g");
+  const nodeGroup = make("g");
+  const pulseGroup = make("g");
+
+  const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+
+  links.forEach(([a, b]) => {
+    const A = byId[a], B = byId[b];
+    make("line", {
+      x1: A.x, y1: A.y,
+      x2: B.x, y2: B.y,
+      class: "system-link"
+    }, linkGroup);
+  });
+
+  nodes.forEach(n => {
+    make("circle", {
+      cx: n.x,
+      cy: n.y,
+      r: n.r,
+      class: `system-node${n.core ? " core" : ""}`
+    }, nodeGroup);
+
+    make("text", {
+      x: n.x + (n.core ? 0 : 14),
+      y: n.y + (n.core ? 28 : 4),
+      "text-anchor": n.core ? "middle" : "start",
+      class: "system-label"
+    }, nodeGroup).textContent = n.label;
+  });
+
+  function animatePulse(a, b, delay = 0) {
+    const A = byId[a], B = byId[b];
+    const pulse = make("circle", { r: 4, class: "system-pulse" }, pulseGroup);
+
+    let start = null;
+    const duration = 1600;
+
+    function frame(ts) {
+      if (!start) start = ts + delay;
+      const t = (ts - start) / duration;
+
+      if (t < 0) {
+        requestAnimationFrame(frame);
+        return;
+      }
+
+      if (t > 1) {
+        pulse.remove();
+        return;
+      }
+
+      pulse.setAttribute("cx", A.x + (B.x - A.x) * t);
+      pulse.setAttribute("cy", A.y + (B.y - A.y) * t);
+
+      requestAnimationFrame(frame);
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  const routes = [
+    ["core","python"], ["python","apps"],
+    ["core","d3"], ["d3","viz"],
+    ["core","r"], ["r","shiny"],
+    ["core","ml"], ["ml","policy"]
+  ];
+
+  let routeIndex = 0;
+  setInterval(() => {
+    const [a, b] = routes[routeIndex % routes.length];
+    animatePulse(a, b);
+    routeIndex++;
+  }, 900);
+});
+</script>
+
+
+
+  
   </body>
 </html>
