@@ -1,0 +1,13 @@
+main:
+  - title: "Research"
+    url: /research.html
+  - title: "Presentations"
+    url: /presentations.html
+  - title: "Code and Apps"
+    url: /code-and-apps.html
+  - title: "Graphics Portfolio"
+    url: /graphics.html
+  - title: "Media"
+    url: /media.html
+  - title: "Advanced Research"
+    url: /aresearch.html

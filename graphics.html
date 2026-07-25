@@ -1,327 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8B8GSMKSBK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8B8GSMKSBK');
-</script>
-  
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Graphics Portfolio — Diego M. Macall</title>
-  <link rel="icon" type="image/x-icon" href="max.ico">
-
-  <!-- Optional: Font Awesome for icons used in the sidebar (envelope, map pin, etc.) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <style>
-    :root{
-      --ink:#0F172A; --muted:#475569; --border:#e5e7eb;
-      --accent:#8B5CF6; --accent-soft:#F1EAFF; --card:#fff; --bg:#fff;
-    }
-
-    /* ----- Masthead from previous step (optional if already on page) ----- */
-    .masthead{position:fixed; top:0; left:0; right:0; z-index:1000; background:var(--bg); border-bottom:1px solid var(--border);}
-    .masthead__inner-wrap{max-width:1100px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; justify-content:space-between;}
-    .site-title{font-weight:700; color:var(--ink); text-decoration:none;}
-    .visible-links{list-style:none; margin:0; padding:0; display:flex; gap:12px;}
-    .masthead__menu-item a{padding:6px 10px; border-radius:8px; text-decoration:none; color:var(--ink);}
-    .masthead__menu-item a:hover{background:var(--accent-soft); color:var(--accent);}
-    .masthead__menu-item a.active{background:var(--accent); color:#fff;}
-
-    /* ----- Page layout: sidebar + content ----- */
-    .page{
-      max-width:1100px; margin:88px auto 40px; /* top margin accounts for fixed masthead */
-      padding:0 16px;
-      display:grid; grid-template-columns: 280px 1fr; gap:24px;
-    }
-    @media (max-width: 900px){
-      .page{grid-template-columns: 1fr;}
-    }
-
-    /* ----- Sidebar styles ----- */
-    aside.sidebar{
-      position:relative;
-    }
-    .sidebar .sticky{
-      position:sticky; top:88px;  /* sits below the fixed masthead */
-    }
-    .author__avatar img{
-      width:100%; max-width:220px; height:auto; display:block;
-      border-radius:6px; border:1px solid var(--border);
-    }
-    .author__name{margin:.8rem 0 .2rem; color:var(--ink); font-size:1.6rem;}
-    .author__bio{margin:0 0 .8rem; color:#6b7280;}
-    .author__urls-wrapper .btn{display:none;} /* hide “Follow” button if unused */
-    .author__urls{list-style:none; padding:0; margin:.6rem 0 0;}
-    .author__urls li{margin:.4rem 0; color:#6b7280; display:flex; align-items:center; gap:.5rem;}
-    .author__urls a{color:#6b7280; text-decoration:none;}
-    .author__urls a:hover{color:var(--accent);}
-    .author__urls .icon img{width:18px; height:18px; display:inline-block;}
-
-    /* ----- Content (your portfolio cards) ----- */
-    h1{font-size:2rem; margin:0 0 .75rem; color:var(--ink);}
-    p{margin:.6rem 0; color:var(--muted);}
-    .lead{font-size:1.05rem;}
-    .repo-callout{display:flex; align-items:center; gap:.6rem; background:var(--accent-soft); border:1px solid var(--border); padding:12px 14px; border-radius:10px; margin:16px 0 26px;}
-    .repo-callout a{color:var(--accent); font-weight:600; text-decoration:none;}
-    .repo-callout a:hover{text-decoration:underline;}
-    hr{border:none; border-top:1px solid var(--border); margin:26px 0;}
-    h2{font-size:1.25rem; color:var(--ink); margin:0 0 .75rem;}
-    .grid{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px;}
-    @media (max-width:760px){.grid{grid-template-columns:1fr;}}
-    .card{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px 16px; transition: box-shadow .15s ease, transform .15s ease;}
-    .card:hover{box-shadow:0 8px 24px rgba(2,6,23,.06); transform: translateY(-1px);}
-    .card h3{margin:.2rem 0 .35rem; font-size:1.05rem; color:var(--ink);}
-    .card a{color:var(--accent); font-weight:600; text-decoration:none;}
-    .card a:hover{text-decoration:underline;}
-    .eyebrow{font-size:.85rem; color:#6b7280;}
-    footer{margin-top:28px; font-size:.9rem; color:#64748B;}
-  </style>
-</head>
-<body>
-
-
-
-
-
-
-
-
+---
+layout: single
+title: "Graphics Portfolio"
+author_profile: true
+permalink: /graphics.html
+share: false
+---
 
 <style>
-/* width */
-::-webkit-scrollbar {
-  width: 15px;
-}
+  .portfolio-intro {
+    margin-bottom: 1.75rem;
+  }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #3B3355; /* Neutral dark purple for contrast */
-}
+  .portfolio-intro p {
+    max-width: 44rem;
+    line-height: 1.65;
+  }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background-color: #9B5DE5; /* Base metallic purple */
-  background-image: -webkit-linear-gradient(45deg,
-    #C77DFF 0%,   /* Bright lavender */
-    #C77DFF 25%, 
-    #9B5DE5 25%,  /* Medium royal purple */
-    #9B5DE5 50%, 
-    #6930C3 50%,  /* Deep violet shade */
-    #6930C3 75%,
-    #C77DFF 75%, 
-    #C77DFF 100%); /* Bright lavender */
-}
+  .repo-callout {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    padding: 1rem 1.15rem;
+    margin: 1.5rem 0 2rem;
+    border-radius: 0.35rem;
+    background: #e6f1f8;
+  }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #B784F2; /* Lighter violet */
-  background-image: -webkit-linear-gradient(45deg,
-    #C77DFF 0%,   /* Bright lavender */
-    #C77DFF 25%, 
-    #E0AAFF 25%,  /* Pale lilac glow */
-    #E0AAFF 50%, 
-    #C77DFF 50%, 
-    #C77DFF 75%, 
-    #E0AAFF 75%, 
-    #C77DFF 100%); /* Bright lavender */
-}
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .portfolio-card {
+    padding: 1.2rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 0.35rem;
+    background: #fff;
+  }
+
+  .portfolio-card:hover {
+    border-color: #6b9fc8;
+    box-shadow: 0 6px 18px rgba(50, 90, 120, 0.12);
+  }
+
+  .portfolio-card h2 {
+    margin: 0.25rem 0 0.55rem;
+    font-size: 1.2rem;
+  }
+
+  .portfolio-card p {
+    line-height: 1.55;
+  }
+
+  .portfolio-type {
+    color: #57758f;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  @media (max-width: 700px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .author__urls .icon--caixabank {
+    display: inline-flex;
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.15em;
+    vertical-align: -0.15em;
+  }
+
+  .author__urls .icon--caixabank img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 </style>
 
+<section class="portfolio-intro">
+  <p>
+    I create data visualizations that blend clarity, design, and scientific
+    accuracy. Each piece has a specific communication goal: revealing trends,
+    comparing systems, or making abstract metrics easier to understand.
+  </p>
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  <!-- MASTHEAD (keep/remove if your site already injects it) -->
-  <div class="masthead">
-    <div class="masthead__inner-wrap">
-      <nav id="site-nav" class="greedy-nav" aria-label="Primary">
-        <a class="site-title" href="https://diegomacall.github.io/">Diego Maximiliano Macall</a>
-        <ul class="visible-links">
-          <li class="masthead__menu-item"><a href="https://diegomacall.github.io/research.html">Research</a></li>
-          <li class="masthead__menu-item"><a href="https://diegomacall.github.io/presentations.html">Presentations</a></li>
-          <li class="masthead__menu-item"><a href="https://diegomacall.github.io/code-and-apps.html">Code and Apps</a></li>
-          <li class="masthead__menu-item"><a class="active" href="https://diegomacall.github.io/graphics.html">Graphics Portfolio</a></li>
-          <li class="masthead__menu-item"><a href="https://diegomacall.github.io/media.html">Media</a></li>
-          <li class="masthead__menu-item"><a href="https://diegomacall.github.io/aresearch.html">Advanced Research</a></li>
-        </ul>
-      </nav>
-    </div>
+  <div class="repo-callout">
+    <span aria-hidden="true">📁</span>
+    <span>
+      <strong>Explore the complete portfolio on GitHub:</strong><br>
+      <a href="https://github.com/DiegoMacall/graphics-portfolio">
+        github.com/DiegoMacall/graphics-portfolio
+      </a>
+    </span>
   </div>
+</section>
 
-  <!-- PAGE GRID -->
-  <div class="page">
-    <!-- ===== SIDEBAR (place your code here) ===== -->
-    <aside class="sidebar" aria-label="Profile">
-      <div class="sticky">
-        <div itemscope itemtype="http://schema.org/Person">
-          <div class="author__avatar">
-            <!-- Use a relative path that exists on your site -->
-            <img src="Diego Macall/profilepic.jpg" alt="Portrait of Diego M. Macall" itemprop="image" loading="lazy" decoding="async">
-          </div>
+<div class="portfolio-grid">
+  <article class="portfolio-card">
+    <div class="portfolio-type">Infographic · World Bank Group</div>
+    <h2>BRICS v G7 Demographics</h2>
+    <p>
+      A comparison of fertility trends in BRICS and G7 countries alongside
+      each bloc’s share of the global population in 2024.
+    </p>
+    <a href="https://github.com/DiegoMacall/graphics-portfolio/tree/main/NCW_Demographics">
+      View on GitHub →
+    </a>
+  </article>
 
-          <div class="author__content">
-            <h3 class="author__name" itemprop="name">Diego M. Macall</h3>
-            <p class="author__bio" itemprop="description">Researcher</p>
-          </div>
+  <article class="portfolio-card">
+    <div class="portfolio-type">Dashboard</div>
+    <h2>Financial Dashboard</h2>
+    <p>
+      An interactive half-year report showing key assets, composition, and
+      changes at a glance.
+    </p>
+    <a href="https://github.com/DiegoMacall/graphics-portfolio/tree/main/09_dashboard">
+      View on GitHub →
+    </a>
+  </article>
 
-          <div class="author__urls-wrapper">
-            <ul class="author__urls social-icons">
-              <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
-                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                <span itemprop="name">Earth</span>
-              </li>
-
-              <li>
-                <a href=" xxxxx email should go herexxxx " rel="me">
-                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                  <span>Email</span>
-                </a>
-              </li>
-
-
-              
-              <li>
-                <a href="https://bsky.app/profile/diegommacall.bsky.social" target="_blank" rel="me noopener">
-                  <!-- tiny inline Bluesky icon kept -->
-                  <span class="icon icon--bluesky" aria-hidden="true">🦋</span>
-                  <span>Bluesky</span>
-                </a>
-              </li>
-
-
-              <li>
-                <a href="https://www.instagram.com/max.kinetic/" target="_blank" rel="noopener">
-                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                  <span>Instagram</span>
-                </a>
-              </li>
-
-              <li>
-                <a href="https://www.linkedin.com/in/diego-macall" target="_blank" rel="me noopener">
-                  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                  <span>LinkedIn</span>
-                </a>
-              </li>
-
-              <li>
-                <a href="https://www.youtube.com/@TA-The.Atelier" target="_blank" rel="noopener">
-                  <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-                  <span>YouTube</span>
-                </a>
-              </li>
-
-              <li>
-                <a href="https://becarios.fundacionlacaixa.org/ca/diego-macall--B005568" target="_blank" rel="noopener">
-                  <img src="caixa.ico" alt="la Caixa Fellow" width="18" height="18">
-                  <span>la Caixa</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </aside>
-
-    <!-- ===== MAIN CONTENT (your existing portfolio section) ===== -->
-    <main aria-label="Graphics Portfolio">
-      <h1>🎨 Graphics Portfolio</h1>
-      <p class="lead">
-        I create data visualizations that blend clarity, design, and scientific accuracy.
-        Each piece showcases a specific communication goal: whether it’s revealing trends,
-        comparing systems, or visualizing abstract metrics.
-      </p>
-
-      <div class="repo-callout">
-        <span>📁</span>
-        <span><strong>Explore the full repository on GitHub:</strong>
-          <a href="https://github.com/DiegoMacall/graphics-portfolio" target="_blank" rel="noopener">github.com/DiegoMacall/graphics-portfolio</a>
-        </span>
-      </div>
-
-      <hr />
-
-      <section aria-labelledby="featured">
-        <h2 id="featured">🖼️ Featured Works</h2>
-
-        <div class="grid">
-        
-          <article class="card">
-            <div class="eyebrow"> Infographic World Bank Group</div>
-            <h3> World Bank Group: BRICS v G7 Demographics (2025)</h3>
-            <p>This infographic compares fertility trends in BRICS and G7 countries and contrasts them with each bloc’s share of the global population in 2024.</p>
-            <a href="https://github.com/DiegoMacall/graphics-portfolio/tree/main/NCW_Demographics" target="_blank" rel="noopener">
-              View on GitHub →
-            </a>
-          </article>
-
-
-          
-          <article class="card">
-            <div class="eyebrow">Dashboard</div>
-            <h3>Financial Dashboard (Company X, 2025)</h3>
-            <p>Interactive half-year report showing key assets, composition, and deltas at a glance.</p>
-            <a href="https://github.com/DiegoMacall/graphics-portfolio/tree/main/09_dashboard" target="_blank" rel="noopener">
-              View on GitHub →
-            </a>
-          </article>
-
-          <article class="card">
-            <div class="eyebrow">Comparative Graphic</div>
-            <h3>Slope Graph: Life Expectancy in Central America</h3>
-            <p>Multi-decade comparison, emphasizing relative change across countries.</p>
-            <a href="https://github.com/DiegoMacall/graphics-portfolio/tree/main/01_slope-graph" target="_blank" rel="noopener">
-              View on GitHub →
-            </a>
-          </article>
-        </div>
-
-        <footer>
-          Last updated: 2025-12-10 · Designed &amp; built by Diego M. Macall
-        </footer>
-      </section>
-    </main>
-  </div>
-
+  <article class="portfolio-card">
+    <div class="portfolio-type">Comparative Graphic</div>
+    <h2>Slope Graph: Life Expectancy in Central America</h2>
+    <p>
+      A multi-decade comparison that emphasizes relative change across
+      Central American countries.
+    </p>
+    <a href="https://github.com/DiegoMacall/graphics-portfolio/tree/main/01_slope-graph">
+      View on GitHub →
+    </a>
+  </article>
+</div>
 
 <script>
-  // Disable right-click context menu
-  document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-  });
+  document.querySelectorAll(
+    '.author__urls a[href*="becarios.fundacionlacaixa.org"]'
+  ).forEach((link) => {
+    const icon = link.querySelector("i");
 
-  // Block common keyboard shortcuts: F12, Ctrl+Shift+I/J/C, Ctrl+U/S/P
-  document.addEventListener('keydown', function (e) {
-    if (e.keyCode === 123) { // F12
-      e.preventDefault();
-    }
-    if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) { // I, J, C
-      e.preventDefault();
-    }
-    if (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 80)) { // U, S, P
-      e.preventDefault();
+    if (icon) {
+      icon.outerHTML = `
+        <span class="icon icon--caixabank" aria-hidden="true">
+          <img src="{{ '/caixa.ico' | relative_url }}" alt="">
+        </span>
+      `;
     }
   });
 </script>
-
-
-  
-</body>
-</html>

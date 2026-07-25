@@ -1,1 +1,59 @@
-theme: jekyll-theme-minimal
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "air"
+
+locale: "en-US"
+title: "Diego M. Macall"
+title_separator: "·"
+name: "Diego M. Macall"
+description: "Research, food systems, sustainability, and data science."
+url: "https://diegomacall.github.io"
+baseurl: ""
+
+masthead_title: "Diego Maximiliano Macall"
+breadcrumbs: false
+search: false
+
+author:
+  name: "Diego M. Macall"
+  avatar: "/Diego Macall/profilepic.jpg"
+  bio: "Researcher <br>Founder &amp; CEO of Ciberra"
+  location: "World"
+  links:
+    - label: "Ciberra"
+      icon: "fas fa-fw fa-globe"
+      url: "https://ciberra.com/"
+    - label: "Bluesky"
+      icon: "fab fa-fw fa-bluesky"
+      url: "https://bsky.app/profile/diegommacall.bsky.social"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/max.kinetic/"
+    - label: "DS Portfolio"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/diegomacall"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/diego-macall"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@TA-The.Atelier"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0002-9436-8740"
+    - label: "la Caixa"
+      icon: "icon-caixa"
+      url: "https://becarios.fundacionlacaixa.org/ca/diego-macall--B005568"
+
+
+plugins:
+  - jekyll-include-cache
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      comments: false
