@@ -6,12 +6,14 @@ title: "Diego M. Macall"
 title_separator: "·"
 name: "Diego M. Macall"
 description: "Research, food systems, sustainability, and data science."
+favicon: "/max.ico"
 url: "https://diegomacall.github.io"
 baseurl: ""
 
 masthead_title: "Diego Maximiliano Macall"
 breadcrumbs: false
 search: false
+
 
 author:
   name: "Diego M. Macall"
