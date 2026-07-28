@@ -23,7 +23,7 @@ share: false
   }
 
   #systems-svg {
-    width: 130%;
+    width: 115%;
     max-width: 1000px;
     height: 260px;
     display: block;
@@ -217,14 +217,23 @@ share: false
 
     const nodes = [
       { id: "core", x: 450, y: 90, r: 16, label: "Diego M. Macall", core: true },
-      { id: "r", x: 250, y: 45, r: 10, label: "R" },
-      { id: "python", x: 265, y: 135, r: 10, label: "Python" },
+      {
+        id: "r", x: 250, y: 45, r: 10, label: "R",
+        labelDx: 0, labelDy: -18, labelAnchor: "middle"
+      },
+      {
+        id: "python", x: 265, y: 95, r: 10, label: "Python",
+        labelDx: 0, labelDy: 28, labelAnchor: "middle"
+      },
       { id: "shiny", x: 355, y: 35, r: 9, label: "Shiny" },
       { id: "d3", x: 610, y: 40, r: 9, label: "D3.js" },
       { id: "viz", x: 675, y: 100, r: 9, label: "Visualization" },
-      { id: "policy", x: 600, y: 145, r: 9, label: "Policy" },
+      { id: "policy", x: 600, y: 125, r: 9, label: "Policy" },
       { id: "ml", x: 470, y: 30, r: 9, label: "AI / ML" },
-      { id: "apps", x: 355, y: 145, r: 9, label: "Apps" }
+      {
+        id: "apps", x: 355, y: 120, r: 9, label: "Apps",
+        labelDx: 0, labelDy: 28, labelAnchor: "middle"
+      }
     ];
 
     const links = [
@@ -272,9 +281,11 @@ share: false
       }, nodeGroup);
 
       const label = make("text", {
-        x: node.x + (node.core ? 0 : 14),
-        y: node.y + (node.core ? 28 : 4),
-        "text-anchor": node.core ? "middle" : "start",
+        x: node.x + (node.core ? 0 : (node.labelDx ?? 14)),
+        y: node.y + (node.core ? 28 : (node.labelDy ?? 4)),
+        "text-anchor": node.core
+          ? "middle"
+          : (node.labelAnchor ?? "start"),
         class: "system-label"
       }, nodeGroup);
 
