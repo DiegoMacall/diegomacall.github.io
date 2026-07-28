@@ -1,0 +1,50 @@
+<link rel="icon" type="image/x-icon" href="{{ '/max.ico?v=2' | relative_url }}">
+
+
+
+
+<style>
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #145214;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg,
+                #ff6a00 0 25%,
+                #ff8c00 25% 50%,
+                #ffb347 50% 75%,
+                #ff7518 75% 100%);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(45deg,
+                #ffffff 0 25%,
+                #ff0000 25% 50%,
+                #ffffff 50% 75%,
+                #ff0000 75% 100%);
+    }
+
+    .author__urls i.icon-caixa {
+        display: inline-block;
+        width: 1.1em;
+        height: 1.1em;
+        background-image: url("{{ '/caixa.ico' | relative_url }}");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        vertical-align: -0.12em;
+    }
+
+    .author__urls i.icon-caixa::before {
+        content: "";
+    }
+
+    .author__urls .fa-orcid {
+        color: #a6ce39;
+    }
+</style>
