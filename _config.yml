@@ -18,12 +18,9 @@ search: false
 author:
   name: "Diego M. Macall"
   avatar: "/Diego Macall/profilepic.jpg"
-  bio: "Researcher <br>Founder &amp; Principal Consultant at Ciberra"
+  bio: "Researcher"
   location: "World"
   links:
-    - label: "Ciberra"
-      icon: "fas fa-fw fa-globe"
-      url: "https://ciberra.com/"
     - label: "Bluesky"
       icon: "fab fa-fw fa-bluesky"
       url: "https://bsky.app/profile/diegommacall.bsky.social"
