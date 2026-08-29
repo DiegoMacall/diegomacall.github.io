@@ -1,5 +1,6 @@
 ---
 title: "Value chain actors call for more pragmatism in the implementation of the True Cost of Food Concept: Evidence from a stakeholder perception survey in Switzerland"
+link: false
 excerpt: "Stakeholder views on True Cost Accounting of Food (TCA)implementation in Switzerland"
 header:
   teaser: false
