@@ -22,7 +22,7 @@ author:
   location: "World"
   links:
     - label: "Substack"
-      icon: "fa-fw substack-icon"
+      icon: "icon-substack"
       url: "https://substack.com/@macallonfood"
     - label: "Bluesky"
       icon: "fab fa-fw fa-bluesky"
